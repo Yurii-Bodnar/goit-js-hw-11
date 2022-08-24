@@ -26,3 +26,118 @@
   background-size: cover;
   background-position: center;
 }
+body{
+background: rgb(2,0,36);
+background: linear-gradient(343deg, rgba(2,0,36,1) 0%, rgba(65,138,94,1) 35%, rgba(0,212,255,1) 100%);
+}
+.gallery{
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    // grid-auto-rows: 240px;
+  grid-gap: 12px;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  
+
+}
+
+.photo-link {
+  text-decoration: none;
+  margin-top: 20px;
+  margin-left: 20px;
+  min-width: 320px;
+  border: 2px solid rgb(225, 225, 225);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+  display: block;
+}
+
+.photo-link:hover,
+.photo-link:focus {
+  transform: scale(1.05);
+};
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.photo-img {
+  display: block;
+  height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.info-item {
+  margin: 0;
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+.search-form{
+  display: flex;
+  justify-content: center;
+ 
+  background: rgb(2,0,36);
+background: linear-gradient(343deg, rgba(2,0,36,1) 0%, rgba(65,138,94,1) 35%, rgba(0,212,255,1) 100%);
+  height: 50px;
+  height: 40px;
+  border-radius: 30px;
+}
+.search-form__input{
+  height: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 30px;
+  margin-right: 20px;
+  border: none;
+
+}
+.search-form__button{
+  height: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border: none;
+  border-radius: 30px;
+  background-color:inherit;
+}
+.search-form__button:hover,
+.search-form__button:focus{
+  background-color: aqua;
+  transform: scale(1.05);
+ 
+}
+// .load-more{
+//   display: flex;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   color: #fff;
+//   border: none;
+//   border-radius: 30px;
+//   background-color:inherit;
+//   // max-width: 100%;
+//   width: 100px;
+//   text-align: center;
+//   // padding: 10px,auto;
+//   margin-bottom: 10px;
+// }
+// .load-more:hover,
+// .load-more:focus{
+//   background-color: rgb(2,0,36);
+//   transform: scale(1.05);
+// }
