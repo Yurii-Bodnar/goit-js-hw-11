@@ -32,6 +32,7 @@ SearchFormRef.addEventListener('submit', onFormSubmitt);
 
 function onFormSubmitt(event) {
   event.preventDefault();
+    currentPage = 1;
 
   const inputValue = SearchFormRef.elements.searchQuery.value;
   gelaryRef.innerHTML = '';
