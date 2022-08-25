@@ -141,3 +141,30 @@ background: linear-gradient(343deg, rgba(2,0,36,1) 0%, rgba(65,138,94,1) 35%, rg
 //   background-color: rgb(2,0,36);
 //   transform: scale(1.05);
 // }
+
+
+.load-more{
+    display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  background-color:inherit;
+  // max-width: 100%;
+  width: 100px;
+  text-align: center;
+  // padding: 10px,auto;
+  margin-bottom: 10px;
+}
+.load-more:hover,
+.load-more:focus{
+  background-color: rgb(2,0,36);
+  transform: scale(1.05);
+  visibility: visible;
+}
+
+.load-more--hidden{
+  visibility: hidden;
+}

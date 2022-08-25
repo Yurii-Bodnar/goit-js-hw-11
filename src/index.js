@@ -9,7 +9,7 @@ const BASE_URL = 'https://pixabay.com/api/';
 
 const SearchFormRef = document.querySelector('.search-form');
 const gelaryRef = document.querySelector('.gallery');
-const loadMore = document.querySelector('.load-more_js');
+const loadMore = document.querySelector('.load-more');
 
 let currentPage = 1;
 async function getAxios(value) {
@@ -71,9 +71,11 @@ async function getPhotoForPage() {
   });
   if(maxPage == currentPage){
     Notiflix.Notify.info("Sorry, there are no images matching your search query. Please try again.")
-    loadMore.setAttribute("hidden","hidden")
+    // loadMore.setAttribute("hidden","hidden")
+    loadMore.classList.add("load-more--hidden")
   }else{
-    loadMore.removeAttribute('hidden');
+    // loadMore.removeAttribute('hidden');
+    loadMore.classList.remove("load-more--hidden")
   }
   
 }
