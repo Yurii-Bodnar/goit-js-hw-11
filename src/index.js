@@ -5,7 +5,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const API_KEY = '29465886-f70572c8b9c11640077f8b34a';
 const BASE_URL = 'https://pixabay.com/api/';
-// const FILTER_RESPONSE = 'q,image_type=photo,orientation,safesearch=true'
 
 const SearchFormRef = document.querySelector('.search-form');
 const gelaryRef = document.querySelector('.gallery');
@@ -25,15 +24,8 @@ async function getAxios(value) {
       safesearch: true,
     },
   };
-
-//   try {
     const response = await axios(options);
-    console.log(response);
-
     return response.data;
-//   } catch (error) {
-//     console.log(error);
-//   }
 }
 
 SearchFormRef.addEventListener('submit', onFormSubmitt);
@@ -55,9 +47,11 @@ async function getPhotoForPage() {
   const response = await getAxios(inputValue);
 
   if (response.total == 0) {
+    loadMore.classList.add("load-more--hidden")
     Notiflix.Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
     );
+    
     return;
   }
 
